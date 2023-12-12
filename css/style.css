@@ -1,7 +1,13 @@
-.orange {
-    color: orange;
+body{
+    background-color: black;
+    color: white;
 }
 
-.couleur_red{
-    color: red;
+h1, h2, h3, h4 ,p{
+    text-align: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
 }
