@@ -1,0 +1,49 @@
+body{
+    background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
+    background-size: cover; /* Mettre le fond en cover ( tout l'ecran ) */
+    zoom: 95%; /* Dézoomer légérement */
+    background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
+    color: white; /* Mettre la couleur de l'écriture en blanc */
+}
+
+h1, h2, h3, h4 ,p{
+    font-size: 15px; /* taille de l'écriture */
+    line-height: 1.8; /* Hauteur de l'écriture */
+    text-align: left; /* Aligner au gauche */
+}
+img{
+    width: 100px; /* Largeur de l'image */
+    height: 100px; /* hauteur de l'image */
+    border-radius: 50%; /* arrondir de 50%*/
+    margin-bottom: 20px; /* mettre de l'espace en bas */
+}
+.container{
+    max-width: 800px; /* Maximun du box a 900% */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+    display: flex; /* Mettre les item sur la même ligne */
+    max-height: 600px; /* Maximun hauteur*/
+    flex-direction: column; /* mettre les card en colone */
+    width: calc(100vw - 60px); /* Calcule la largeur */
+    padding: 10px; /* espace dedans de 10px */
+    background-color: rgba(0, 0, 0, 0.658); /* Box color */
+    border-radius: 5px; /* Arrondir les angles de 5px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Ombre du box color */
+    position: relative; /* Position mise en relative */
+    text-align: center; /* Centrer le contenu horizontalement */
+    border: 2px solid #ffffff; /* Bordure blanche */
+}
+.carteApprenant{
+    display: flex; /* Mettre les item sur la même ligne */
+    margin-left: 30px; /* espace de 30px a gauche */
+    margin-right: 30px ; /* espace de 30px a droite */
+}
+.container:hover{
+    transform: scale(1.05); /* agrandir la partie ou la sourie touche */
+}
+a:visited{
+    color: steelblue; /* mettre les liens qu'on a déjà cliqué en bleu */
+}
+a{
+    color: #ffffff; /* mettre les liens en blanc */
+}
