@@ -14,10 +14,26 @@ h1, h2, h3, h4 ,p{
     text-align: left; /* Aligner au gauche */
 }
 img{
-    width: 100px; /* Largeur de l'image */
-    height: 100px; /* hauteur de l'image */
+    width: 150px; /* Largeur de l'image */
+    padding: 73px;
+    height: 150px; /* hauteur de l'image */
     border-radius: 50%; /* arrondir de 50%*/
-    margin-bottom: 20px; /* mettre de l'espace en bas */
+    margin-bottom: 10px; /* mettre de l'espace en bas */
+
+}
+
+button {
+    height: 40px;
+    width: 250px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: relative;
+    transition: all .2s;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 30px;
 }
                                                             /* Css avec class */
 .container{
@@ -39,6 +55,7 @@ img{
     text-align: center; /* Centrer le contenu horizontalement */
     border: 2px solid #ffffff; /* Bordure blanche */
 }
+
 #MyResearch{
     position: absolute;
     left: 300px;
