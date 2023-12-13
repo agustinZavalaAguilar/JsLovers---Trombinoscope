@@ -8,6 +8,19 @@ body{
     overflow-x: hidden; /* Enlever la barre du bas */
 }
 
+.ordi-ligne {
+  
+}
+.tablette-ligne{
+    
+}
+
+.carteApprenant{
+    
+}
+
+
+
 h1, h2, h3, h4 ,p{
     font-size: 15px; /* taille de l'écriture */
     line-height: 1.8; /* Hauteur de l'écriture */
@@ -37,6 +50,8 @@ button {
 }
                                                             /* Css avec class */
 .container{
+    display: flex;
+    flex-direction: column;
     max-width: 800px; /* Maximun du box a 900% */
     margin: 15px;
     justify-content: center; /* Centrer le contenu horizontalement */
@@ -63,9 +78,9 @@ button {
     height: 35px;
 }
 .carteApprenant{
-    display: flex; /* Mettre les item sur la même ligne */
-    margin-left: 30px; /* espace de 30px a gauche */
-    margin-right: 30px ; /* espace de 30px a droite */
+    /*display: flex; /* Mettre les item sur la même ligne */
+    /*margin-left: 30px; /* espace de 30px a gauche */
+    /*margin-right: 30px ; /* espace de 30px a droite */
 }
 .container:hover{
     transform: scale(1.05); /* agrandir la partie ou la sourie touche */
@@ -84,48 +99,37 @@ a{
 /* Media query pour les tablettes (par exemple, iPad) */
 @media only screen and (max-width: 768px) {
     body {
-        background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
-        background-size: 3000px; /* Mettre le fond en cover ( tout l'ecran ) */
-        height: 300px; /* Définir la hauteur */
-        zoom: 95%; /* Dézoomer légérement */
-        background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
-        color: white; /* Mettre la couleur de l'écriture en blanc */
+        background-size: 3000px;
+        height: 300px;
     }
 
     h1, h2, h3, h4, p {
-    font-size: 13px; /* taille de l'écriture */
-    line-height: 1.4; /* Hauteur de l'écriture */
-    text-align: left; /* Aligner au gauche */
-        }
+        font-size: 13px;
+        line-height: 1.4;
     }
-    .carteApprenant{
-        display: flex; /* Mettre les item sur la même ligne */
-        margin-left: 15px; /* espace de 30px a gauche */
-        margin-right: 15px ; /* espace de 30px a droite */
-    
+
+    .carteApprenant {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 /* Media query pour les téléphones */
 @media only screen and (max-width: 480px) {
     body {
-        background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
-        background-size: 2000px; /* Mettre le fond en cover ( tout l'ecran ) */
-        height: 300px; /* Définir la hauteur */
-        zoom: 95%; /* Dézoomer légérement */
-        background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
-        color: white; /* Mettre la couleur de l'écriture en blanc */
+        background-size: 2000px;
+        height: 300px;
     }
 
     h1, h2, h3, h4, p {
-        font-size: 11px; /* taille de l'écriture */
-        line-height: 1.2; /* Hauteur de l'écriture */
-        text-align: left; /* Aligner au gauche */
+        font-size: 11px;
+        line-height: 1.2;
     }
 
+    .carteApprenant {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
-    .carteApprenant{
-        display: flex; /* Mettre les item sur la même ligne */
-        margin-left: 5px; /* espace de 30px a gauche */
-        margin-right: 5px ; /* espace de 30px a droite */
 
-}
+
