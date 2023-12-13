@@ -398,7 +398,7 @@ function RechercheParNom(){
  * todo: 1) Ecrire la structure=> fait
  * todo: 2) Trouver la bonne requette avec postman=> fait
  * todo: 3) Mettre l'élement déclencheur sur l'index html => fait
- * todo: 4) Ecrire des donnée dans le DOM (document html)
+ * todo: 4) Ecrire des donnée dans le DOM (document html) pour un seul apprenant
  * 
  */
 
@@ -412,11 +412,19 @@ function RechercheParNom(){
             console.log(data); //Affiche dans la console les resultats de la requette
             console.log(data[0].prenom)//Affiche dans la console le prénom de l'apprenant num 6
 
-
+            var nom = document.getElementById("nom0")
+            nom.innerHTML = data[0].nom;
 
             var prenom = document.getElementById("prenom0")//Selectionne la balise qui contient l'id "prenom0"
             prenom.innerHTML = data[0].prenom;
 
+            var image = document.getElementById("avatar0")
+            image.src = data[0].image;
+
+            var extrait = document.getElementById("extrait0");
+            extrait.innerHTML = data[0].excerpt.rendered;
+        
+            
 
 
         })
