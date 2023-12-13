@@ -1,3 +1,4 @@
+                                                          /* Css sans class */
 body{
     background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
     background-size: 4000px; /* Mettre le fond en 2000px ( tout l'ecran ) */
@@ -17,12 +18,13 @@ img{
     border-radius: 50%; /* arrondir de 50%*/
     margin-bottom: 20px; /* mettre de l'espace en bas */
 }
+                                                            /* Css avec class */
 .container{
     max-width: 800px; /* Maximun du box a 900% */
     justify-content: center; /* Centrer le contenu horizontalement */
     align-items: center; /* Centrer le contenu horizontalement */
     display: flex; /* Mettre les item sur la même ligne */
-    max-height: 600px; /* Maximun hauteur*/
+    /*max-height: 600px;  Maximun hauteur*/
     flex-direction: column; /* mettre les card en colone */
     width: calc(100vw - 60px); /* Calcule la largeur */
     padding: 10px; /* espace dedans de 10px */
@@ -47,6 +49,7 @@ a:visited{
 a{
     color: #ffffff; /* mettre les liens en blanc */
 }
+                                                             /* Média Query */
 /* Media query pour les tablettes (par exemple, iPad) */
 @media only screen and (max-width: 768px) {
     body {
