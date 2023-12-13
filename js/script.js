@@ -29,10 +29,8 @@ fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
     
-    console.log(data)
     var index = 0
-    var index_Tab_element_apprenants = 0
-    console.log(data.length)
+    var index_Tab_element_apprenants = 0 
     valeur_max_trobi = data.length
     for (index=0 ; index < data.length; index++ ){
         for (index_Tab_element_apprenants; index_Tab_element_apprenants < Tab_element_apprenants.length; index_Tab_element_apprenants++){
@@ -49,7 +47,6 @@ fetch(url)
                     Apprenant.style.display = "block"
                     if (Tab_element_apprenants[index_Tab_element_apprenants] == "extrait"){
                         textAEcrire  = data[0]["excerpt"]["rendered"];
-                        console.log(textAEcrire)
                     }else{
                         textAEcrire = data[index][Tab_clé_element[index_Tab_element_apprenants]]  
                     }
@@ -134,7 +131,6 @@ fetch(url)
 
     var index = 0
     var index_Tab_element_apprenants = 0
-    console.log(data.length)
     valeur_max_trobi = data.length
     for (index=0 ; index < data.length; index++ ){
         for (index_Tab_element_apprenants; index_Tab_element_apprenants < Tab_element_apprenants.length; index_Tab_element_apprenants++){
@@ -151,7 +147,6 @@ fetch(url)
                     Apprenant.style.display = "block"
                     if (Tab_element_apprenants[index_Tab_element_apprenants] == "extrait"){
                         textAEcrire  = data[0]["excerpt"]["rendered"];
-                        console.log(textAEcrire)
                     }else{
                         textAEcrire = data[index][Tab_clé_element[index_Tab_element_apprenants]]  
                     }
@@ -359,7 +354,7 @@ function RechercheParNom(){
 
 }
 
-/*console.log(data)
+/*  console.log(data)
     console.log(data[0]["nom"])
     var Apprenant1_nom = document.getElementById('nom1');
     
@@ -397,3 +392,38 @@ function RechercheParNom(){
     var Apprenant1_cv = document.getElementById('cv1');
     textAEcrire  = data[0]["link"];
     Apprenant1_cv.href = textAEcrire */
+
+/**
+ * Commentaires pour expliquer le code de récupération des donnés via l'API, ci dessous: ------------------------
+ * todo: 1) Ecrire la structure=> fait
+ * todo: 2) Trouver la bonne requette avec postman=> fait
+ * todo: 3) Mettre l'élement déclencheur sur l'index html => fait
+ * todo: 4) Ecrire des donnée dans le DOM (document html)
+ * 
+ */
+
+    function filtreAnnee2022(){  //Récupère les donnes des apprenants de la promo 2022-2023
+
+        const url = "https://portfolios.ern-mende.fr/wp-json/wp/v2/apprenants?promotions=15" //Réquette HTTP. L'ID 15 corresponds à la promo 2022-2023
+
+        fetch(url) //Permets d'intérroger une base de données via l'API
+        .then((resp) => resp.json())//formattage du document
+        .then(function(data) {//Traitement des données récupérées
+            console.log(data); //Affiche dans la console les resultats de la requette
+            console.log(data[0].prenom)//Affiche dans la console le prénom de l'apprenant num 6
+
+
+
+            var prenom = document.getElementById("prenom0")//Selectionne la balise qui contient l'id "prenom0"
+            prenom.innerHTML = data[0].prenom;
+
+
+
+        })
+        .catch(function(error) {//S'il y a une erreur dans la reponse 
+        console.log(error);//affiche l'erreur dans la console
+        });
+
+
+
+    }
