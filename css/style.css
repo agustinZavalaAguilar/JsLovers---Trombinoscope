@@ -5,6 +5,7 @@ body{
     zoom: 95%; /* Dézoomer légérement */
     background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
     color: white; /* Mettre la couleur de l'écriture en blanc */
+    overflow-x: hidden; /* Enlever la barre du bas */
 }
 
 h1, h2, h3, h4 ,p{
@@ -21,9 +22,12 @@ img{
                                                             /* Css avec class */
 .container{
     max-width: 800px; /* Maximun du box a 900% */
+    margin: 15px;
     justify-content: center; /* Centrer le contenu horizontalement */
     align-items: center; /* Centrer le contenu horizontalement */
-    display: flex; /* Mettre les item sur la même ligne */
+    /*display: flex;  Mettre les item sur la même ligne */
+    flex-wrap: wrap;
+    align-content: space-between;
     /*max-height: 600px;  Maximun hauteur*/
     flex-direction: column; /* mettre les card en colone */
     width: calc(100vw - 60px); /* Calcule la largeur */
@@ -35,6 +39,12 @@ img{
     text-align: center; /* Centrer le contenu horizontalement */
     border: 2px solid #ffffff; /* Bordure blanche */
 }
+#MyResearch{
+    position: absolute;
+    left: 300px;
+    width: 1000px; /* size of a single icon */
+    height: 35px;
+}
 .carteApprenant{
     display: flex; /* Mettre les item sur la même ligne */
     margin-left: 30px; /* espace de 30px a gauche */
@@ -45,9 +55,13 @@ img{
 }
 a:visited{
     color: steelblue; /* mettre les liens qu'on a déjà cliqué en bleu */
+    text-decoration: none; /* Enleve la décoration des lien */
+    list-style: none; /* Enleve la décoration des lien */
 }
 a{
     color: #ffffff; /* mettre les liens en blanc */
+    text-decoration: none; /* Enleve la décoration des lien */
+    list-style: none; /* Enleve la décoration des lien */
 }
                                                              /* Média Query */
 /* Media query pour les tablettes (par exemple, iPad) */
