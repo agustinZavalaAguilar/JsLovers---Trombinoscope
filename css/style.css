@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
-    background-size: cover; /* Mettre le fond en cover ( tout l'ecran ) */
+    background-size: 4000px; /* Mettre le fond en 2000px ( tout l'ecran ) */
     zoom: 95%; /* Dézoomer légérement */
     background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
     color: white; /* Mettre la couleur de l'écriture en blanc */
@@ -46,4 +46,52 @@ a:visited{
 }
 a{
     color: #ffffff; /* mettre les liens en blanc */
+}
+/* Media query pour les tablettes (par exemple, iPad) */
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
+        background-size: 3000px; /* Mettre le fond en cover ( tout l'ecran ) */
+        height: 300px; /* Définir la hauteur */
+        zoom: 95%; /* Dézoomer légérement */
+        background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
+        color: white; /* Mettre la couleur de l'écriture en blanc */
+    }
+
+    h1, h2, h3, h4, p {
+    font-size: 13px; /* taille de l'écriture */
+    line-height: 1.4; /* Hauteur de l'écriture */
+    text-align: left; /* Aligner au gauche */
+        }
+    }
+    .carteApprenant{
+        display: flex; /* Mettre les item sur la même ligne */
+        margin-left: 15px; /* espace de 30px a gauche */
+        margin-right: 15px ; /* espace de 30px a droite */
+    
+}
+
+/* Media query pour les téléphones */
+@media only screen and (max-width: 480px) {
+    body {
+        background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
+        background-size: 2000px; /* Mettre le fond en cover ( tout l'ecran ) */
+        height: 300px; /* Définir la hauteur */
+        zoom: 95%; /* Dézoomer légérement */
+        background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
+        color: white; /* Mettre la couleur de l'écriture en blanc */
+    }
+
+    h1, h2, h3, h4, p {
+        font-size: 11px; /* taille de l'écriture */
+        line-height: 1.2; /* Hauteur de l'écriture */
+        text-align: left; /* Aligner au gauche */
+    }
+
+}
+    .carteApprenant{
+        display: flex; /* Mettre les item sur la même ligne */
+        margin-left: 5px; /* espace de 30px a gauche */
+        margin-right: 5px ; /* espace de 30px a droite */
+
 }
