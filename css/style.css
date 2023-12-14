@@ -2,7 +2,7 @@
 body{
     background-image: url(../images/Desktop\ -\ 4.png); /* Ajouter un fond */
     width: 0px;
-    height: 1000px;
+    height: 100vw;
     zoom: 90%; /* Dézoomer légérement */
     background-repeat: no-repeat; /* *s'assurez qu'il n'y ai pas de répétition */
     color: white; /* Mettre la couleur de l'écriture en blanc */
@@ -10,6 +10,7 @@ body{
 }
 .head{
     width: 100%;
+    display: flex;
     text-align: center;
     background-color: brown;
 }
@@ -61,8 +62,8 @@ button:active{
     filter: drop-shadow(0 0 0.75rem rgba(151, 207, 240, 0.575)); /* Filtre avec ombres*/
     flex-direction: column; /* Mettre en colone */
     text-shadow: 0px 1px 1px rgb(255, 255, 255), 0 0 1em rgb(72, 152, 226), 0 0 0.2em rgb(99, 230, 208); /* Ombre du texte*/
-    max-width: 590px; /* Maximun du box a 400% */
-    margin: 25px; /* Espace */
+    max-width: 25vw; /* Maximun du box a 400% */
+    margin: 8px; /* Espace */
     justify-content: center; /* Centrer le contenu horizontalement */
     align-items: center; /* Centrer le contenu horizontalement */
     /*!display: flex;  Mettre les item sur la même ligne */
@@ -81,9 +82,10 @@ button:active{
 
 #MyResearch{
     position: absolute; /* Position absolut sur le fond*/
-    left: 300px; /* espace a gauche*/
-    width: 1000px; /* Largeur*/
-    height: 35px; /* Hauteur*/
+    margin-top: 10vw; /* espace exterieur haut*/
+    left: 29vw; /* espace a gauche*/
+    width: 50vw; /* Largeur*/
+    height: 3vw; /* Hauteur*/
 }
 .carteApprenant{
     /*!display: flex; /* Mettre les item sur la même ligne */
@@ -117,8 +119,8 @@ a{
         filter: drop-shadow(0 0 0.75rem rgba(151, 207, 240, 0.575)); /* Filtre avec ombres*/
         flex-direction: column; /* Mettre en colone */
         text-shadow: 0px 1px 1px rgb(255, 255, 255), 0 0 1em rgb(72, 152, 226), 0 0 0.2em rgb(99, 230, 208); /* Ombre du texte*/
-        max-width: 400px; /* Maximun du box a 400% */
-        margin: 25px; /* Espace */
+        max-width: 28vw; /* Maximun du box a 24vw */
+        margin: 8px; /* Espace */
         justify-content: center; /* Centrer le contenu horizontalement */
         align-items: center; /* Centrer le contenu horizontalement */
         /*!display: flex;  Mettre les item sur la même ligne */
@@ -133,6 +135,18 @@ a{
         position: relative; /* Position mise en relative */
         text-align: center; /* Centrer le contenu horizontalement */
         border: 2px solid #ffffff; /* Bordure blanche */
+    }
+    button {
+        height: 30px; /* Hauteur du button*/
+        text-align: center; /* Alligner le texte au centre*/
+        object-fit: cover; /* mettre le objet boutton au centre */
+        width: 9vw; /* Largeur du boutton */
+        background-image: linear-gradient(135deg, #3c68c7 40%, #37accf); /* Dégradé image de fond */
+        border: none; /* pas de bordure */
+        border-radius: 5px; /* Arrondir la bordure */
+        font-weight: bold; /* Largeur de l'écriture*/
+        color: white; /* Couleur de l'écriture */
+        cursor: pointer; /* Souris pointer */
     }
 
     h1, h2, h3, h4, p {
@@ -151,6 +165,40 @@ a{
     body {
         background-size: 2000px;
         height: 300px;
+    }
+    .container{
+        display: flex; /* Mettre en ligne*/
+        filter: drop-shadow(0 0 0.75rem rgba(151, 207, 240, 0.575)); /* Filtre avec ombres*/
+        flex-direction: column; /* Mettre en colone */
+        text-shadow: 0px 1px 1px rgb(255, 255, 255), 0 0 1em rgb(72, 152, 226), 0 0 0.2em rgb(99, 230, 208); /* Ombre du texte*/
+        max-width: 30vw; /* Maximun du box a 24vw */
+        margin: 7px; /* Espace */
+        justify-content: center; /* Centrer le contenu horizontalement */
+        align-items: center; /* Centrer le contenu horizontalement */
+        /*!display: flex;  Mettre les item sur la même ligne */
+        align-content: space-between; /* Allign flex container */
+        /*!max-height: 600px;  Maximun hauteur*/
+        flex-direction: column; /* mettre les card en colone */
+        width: calc(100vw - 60px); /* Calcule la largeur */
+        padding: 4px; /* espace dedans de 4px */
+        background-color: rgba(134, 172, 221, 0.658); /* Box color */
+        border-radius: 5px; /* Arrondir les angles de 5px */
+        box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
+        position: relative; /* Position mise en relative */
+        text-align: center; /* Centrer le contenu horizontalement */
+        border: 2px solid #ffffff; /* Bordure blanche */
+    }
+    button {
+        height: 70px; /* Hauteur du button*/
+        text-align: center; /* Alligner le texte au centre*/
+        object-fit: cover; /* mettre le objet boutton au centre */
+        width: 15vw; /* Largeur du boutton */
+        background-image: linear-gradient(135deg, #3c68c7 40%, #37accf); /* Dégradé image de fond */
+        border: none; /* pas de bordure */
+        border-radius: 5px; /* Arrondir la bordure */
+        font-weight: bold; /* Largeur de l'écriture*/
+        color: white; /* Couleur de l'écriture */
+        cursor: pointer; /* Souris pointer */
     }
 
     h1, h2, h3, h4, p {
