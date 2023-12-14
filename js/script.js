@@ -220,14 +220,14 @@ fetch(url)
 
 }
 
-function trouverAnnee(id_année, index){
+function trouverAnnee(id_annee, index){ // Récupère l'année de promotion de l'apprenant à partir de l'ID de la promo 
 
-    var url_annee = "https://portfolios.ern-mende.fr/wp-json/wp/v2/promotions/"+id_année
+    var url_annee = "https://portfolios.ern-mende.fr/wp-json/wp/v2/promotions/"+id_annee;//AZ: j'ai enlevé le caractère spécial: "é"
 
 fetch(url_annee)
 .then((resp) => resp.json())
 .then(function(data) {
-    
+    console.log(data)
     var Apprenant_annee = document.getElementById('annee'+index);
     textAnnee  = data["name"];
     Apprenant_annee.innerHTML = "Année : "+textAnnee
@@ -398,7 +398,8 @@ function RechercheParNom(){
  * todo: 1) Ecrire la structure=> fait
  * todo: 2) Trouver la bonne requette avec postman=> fait
  * todo: 3) Mettre l'élement déclencheur sur l'index html => fait
- * todo: 4) Ecrire des donnée dans le DOM (document html) pour un seul apprenant
+ * todo: 4) Ecrire des donnée dans le DOM (document html) pour un seul apprenant => fait
+ * todo: 5) Faire la boucle pour tout les aprenants 
  * 
  */
 
@@ -412,19 +413,30 @@ function RechercheParNom(){
             console.log(data); //Affiche dans la console les resultats de la requette
             console.log(data[0].prenom)//Affiche dans la console le prénom de l'apprenant num 6
 
-            var nom = document.getElementById("nom0")
-            nom.innerHTML = data[0].nom;
-
-            var prenom = document.getElementById("prenom0")//Selectionne la balise qui contient l'id "prenom0"
-            prenom.innerHTML = data[0].prenom;
-
-            var image = document.getElementById("avatar0")
-            image.src = data[0].image;
-
-            var extrait = document.getElementById("extrait0");
-            extrait.innerHTML = data[0].excerpt.rendered;
-        
             
+            for(var incrementation =0; incrementation < data.length; incrementation++ ){
+            var nom = document.getElementById("nom"+incrementation)
+            nom.innerHTML = data[incrementation].nom;
+
+            var prenom = document.getElementById("prenom"+incrementation)//Selectionne la balise qui contient l'id "prenom0"
+            prenom.innerHTML = data[incrementation].prenom;
+
+            var annee = document.getElementById("annee"+incrementation);
+            trouverAnnee(data[incrementation].promotions,0)// Récupère l'année de promotion de l'apprenant à partir de l'ID de la promo 
+
+            var image = document.getElementById("avatar"+incrementation)
+            image.src = data[incrementation].image;
+
+            var extrait = document.getElementById("extrait"+incrementation);
+            extrait.innerHTML = data[incrementation].excerpt.rendered;
+        
+            var lienPortfolio = document.getElementById("portfolio"+incrementation);
+            lienPortfolio.href = data[incrementation].portfolio;
+
+            var lienCV = document.getElementById("cv"+incrementation);
+            lienCV.href = data[incrementation].link;
+            }
+
 
 
         })
