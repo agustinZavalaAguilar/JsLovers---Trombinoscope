@@ -1,11 +1,11 @@
                                                           /* Css sans class */
 body{
-    background-image: url(../images/fond\ classe.jpg); /* Ajouter un fond */
-    background-size: 4000px; /* Mettre le fond en 2000px ( tout l'ecran ) */
-    zoom: 95%; /* Dézoomer légérement */
-    background-repeat: no-repeat; /* s'assurez qu'il n'y ai pas de répétition */
-    color: white; /* Mettre la couleur de l'écriture en blanc */
-    overflow-x: hidden; /* Enlever la barre du bas */
+    background-image: url(../images/fond\ classe.jpg); /* *Ajouter un fond */
+    background-size: 4000px; /* *Mettre le fond en 2000px ( tout l'ecran ) */
+    zoom: 95%; /* *Dézoomer légérement */
+    background-repeat: no-repeat; /* *s'assurez qu'il n'y ai pas de répétition */
+    color: white; /* *Mettre la couleur de l'écriture en blanc */
+    overflow-x: hidden; /* *Enlever la barre du bas */
 }
 
 .ordi-ligne {
@@ -22,16 +22,16 @@ body{
 
 
 h1, h2, h3, h4 ,p{
-    font-size: 15px; /* taille de l'écriture */
-    line-height: 1.8; /* Hauteur de l'écriture */
-    text-align: left; /* Aligner au gauche */
+    font-size: 15px; /* *taille de l'écriture */
+    line-height: 1.8; /* *Hauteur de l'écriture */
+    text-align: left; /* *Aligner au gauche */
 }
 img{
-    width: 150px; /* Largeur de l'image */
+    width: 150px; /* *Largeur de l'image */
     padding: 73px;
-    height: 150px; /* hauteur de l'image */
-    border-radius: 50%; /* arrondir de 50%*/
-    margin-bottom: 10px; /* mettre de l'espace en bas */
+    height: 150px; /* *hauteur de l'image */
+    border-radius: 50%; /* *arrondir de 50%*/
+    margin-bottom: 10px; /* *mettre de l'espace en bas */
 
 }
 
@@ -52,48 +52,48 @@ button {
 .container{
     display: flex;
     flex-direction: column;
-    max-width: 800px; /* Maximun du box a 900% */
+    max-width: 700px; /* ?Maximun du box a 700% */
     margin: 15px;
-    justify-content: center; /* Centrer le contenu horizontalement */
-    align-items: center; /* Centrer le contenu horizontalement */
-    /*display: flex;  Mettre les item sur la même ligne */
+    justify-content: center; /* ?Centrer le contenu horizontalement */
+    align-items: center; /* ?Centrer le contenu horizontalement */
+    /*!display: flex;  Mettre les item sur la même ligne */
     flex-wrap: wrap;
     align-content: space-between;
-    /*max-height: 600px;  Maximun hauteur*/
-    flex-direction: column; /* mettre les card en colone */
-    width: calc(100vw - 60px); /* Calcule la largeur */
-    padding: 10px; /* espace dedans de 10px */
-    background-color: rgba(0, 0, 0, 0.658); /* Box color */
-    border-radius: 5px; /* Arrondir les angles de 5px */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Ombre du box color */
-    position: relative; /* Position mise en relative */
-    text-align: center; /* Centrer le contenu horizontalement */
-    border: 2px solid #ffffff; /* Bordure blanche */
+    /*!max-height: 600px;  Maximun hauteur*/
+    flex-direction: column; /*? mettre les card en colone */
+    width: calc(100vw - 60px); /* ?Calcule la largeur */
+    padding: 10px; /* ?espace dedans de 10px */
+    background-color: rgba(0, 0, 0, 0.658); /*? Box color */
+    border-radius: 5px; /*? Arrondir les angles de 5px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /*? Ombre du box color */
+    position: relative; /*? Position mise en relative */
+    text-align: center; /*? Centrer le contenu horizontalement */
+    border: 2px solid #ffffff; /*? Bordure blanche */
 }
 
 #MyResearch{
     position: absolute;
     left: 300px;
-    width: 1000px; /* size of a single icon */
+    width: 1000px; /*? size of a single icon */
     height: 35px;
 }
 .carteApprenant{
-    /*display: flex; /* Mettre les item sur la même ligne */
-    /*margin-left: 30px; /* espace de 30px a gauche */
-    /*margin-right: 30px ; /* espace de 30px a droite */
+    /*!display: flex; /* Mettre les item sur la même ligne */
+    /*!margin-left: 30px; /* espace de 30px a gauche */
+    /*!margin-right: 30px ; /* espace de 30px a droite */
 }
 .container:hover{
-    transform: scale(1.05); /* agrandir la partie ou la sourie touche */
+    transform: scale(1.05); /*? agrandir la partie ou la sourie touche */
 }
 a:visited{
-    color: steelblue; /* mettre les liens qu'on a déjà cliqué en bleu */
-    text-decoration: none; /* Enleve la décoration des lien */
-    list-style: none; /* Enleve la décoration des lien */
+    color: steelblue; /* *mettre les liens qu'on a déjà cliqué en bleu */
+    text-decoration: none; /* *Enleve la décoration des lien */
+    list-style: none; /* *Enleve la décoration des lien */
 }
 a{
-    color: #ffffff; /* mettre les liens en blanc */
-    text-decoration: none; /* Enleve la décoration des lien */
-    list-style: none; /* Enleve la décoration des lien */
+    color: #ffffff; /* *mettre les liens en blanc */
+    text-decoration: none; /* *Enleve la décoration des lien */
+    list-style: none; /* *Enleve la décoration des lien */
 }
                                                              /* Média Query */
 /* Media query pour les tablettes (par exemple, iPad) */
