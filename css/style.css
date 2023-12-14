@@ -1,6 +1,6 @@
                                                           /* Css sans class */
 body{
-    background-image: url(../images/Desktop\ -\ 4.png); /* Ajouter un fond */
+    background-image: url(../images/Desktop\ -\ 4.png);  /*Ajouter un fond */
     width: 0px;
     height: 100vw;
     zoom: 90%; /* Dézoomer légérement */
@@ -8,11 +8,22 @@ body{
     color: white; /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
-.head{
-    width: 100%;
+.titre{
     display: flex;
-    text-align: center;
-    background-color: brown;
+    justify-content: center;
+    margin-top: unset;
+    width: 200px;
+}
+.head{
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.input{
+    display: flex;
+    margin-left: 15px;
+    padding: 5px;
+    margin: 5px;
 }
 .ordi-ligne {
   display: flex; /* Mettre en ligne*/
@@ -137,7 +148,7 @@ a{
         border: 2px solid #ffffff; /* Bordure blanche */
     }
     button {
-        height: 30px; /* Hauteur du button*/
+        height: 70px; /* Hauteur du button*/
         text-align: center; /* Alligner le texte au centre*/
         object-fit: cover; /* mettre le objet boutton au centre */
         width: 9vw; /* Largeur du boutton */
