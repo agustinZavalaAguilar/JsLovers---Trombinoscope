@@ -129,7 +129,7 @@ fetch(url)
 .then(function(data) {
     
 
-    var index = 0
+    /*var index = 0
     var index_Tab_element_apprenants = 0
     valeur_max_trobi = data.length
     for (index=0 ; index < data.length; index++ ){
@@ -161,7 +161,7 @@ fetch(url)
                     }
             }
         }
-        index_Tab_element_apprenants = 0
+        index_Tab_element_apprenants = 0*/
 
     /*var Apprenant_nom = document.getElementById("nom"+index);
     
@@ -208,7 +208,7 @@ fetch(url)
     Apprenant_cv.href = textAEcrire
     Apprenant_portfolio.style.display = "block"*/
 
-    }
+    
 
     
    
@@ -415,26 +415,55 @@ function RechercheParNom(){
 
             
             for(var incrementation =0; incrementation < data.length; incrementation++ ){
-            var nom = document.getElementById("nom"+incrementation)
+
+
+
+            var nom = document.createElement("p")
             nom.innerHTML = data[incrementation].nom;
 
-            var prenom = document.getElementById("prenom"+incrementation)//Selectionne la balise qui contient l'id "prenom0"
+            var prenom =document.createElement("p")//Selectionne la balise qui contient l'id "prenom0"
             prenom.innerHTML = data[incrementation].prenom;
 
-            var annee = document.getElementById("annee"+incrementation);
-            trouverAnnee(data[incrementation].promotions,0)// Récupère l'année de promotion de l'apprenant à partir de l'ID de la promo 
 
-            var image = document.getElementById("avatar"+incrementation)
+
+            var image = document.createElement("img")//Selectionne la balise qui contient l'id "avatar0"
             image.src = data[incrementation].image;
 
-            var extrait = document.getElementById("extrait"+incrementation);
+            var extrait = document.createElement("p")//Selectionne la balise qui contient l'id "extrait0"
             extrait.innerHTML = data[incrementation].excerpt.rendered;
         
-            var lienPortfolio = document.getElementById("portfolio"+incrementation);
+            var lienPortfolio = document.createElement("a")
             lienPortfolio.href = data[incrementation].portfolio;
+            lienPortfolio.innerHTML = "<button class= 'button' >Adresse portfolio</button>"
 
-            var lienCV = document.getElementById("cv"+incrementation);
+            var lienCV = document.createElement("a")//Selectionne la balise qui contient l'id "cv0"
             lienCV.href = data[incrementation].link;
+            lienCV.innerHTML ="<button class='button'>Lien vers le cv</button>"
+
+            var linkedin = document.createElement("a")//Selectionne la balise qui contient l'id "linkedin0"
+            linkedin.href = data[incrementation].linkedin;
+            linkedin.innerHTML = "<img src='JsLovers---Trombinoscope/images/linkedin.png'>"
+            
+
+
+            var carteapprenant = document.createElement("div")
+            carteapprenant.classList.add("container")
+            carteapprenant.appendChild(nom)
+            carteapprenant.appendChild(prenom)
+            carteapprenant.appendChild(image)
+            carteapprenant.appendChild(extrait)
+            carteapprenant.appendChild(lienPortfolio)
+            carteapprenant.appendChild(lienCV)
+            carteapprenant.appendChild(linkedin)
+
+
+            document.getElementById("carte_apprenants").appendChild(carteapprenant);
+
+
+
+
+
+            
             }
 
 
