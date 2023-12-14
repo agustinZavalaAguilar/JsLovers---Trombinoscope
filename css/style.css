@@ -8,7 +8,11 @@ body{
     color: white; /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
-
+.head{
+    width: 100%;
+    text-align: center;
+    background-color: brown;
+}
 .ordi-ligne {
   display: flex; /* Mettre en ligne*/
 }
