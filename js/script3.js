@@ -1,5 +1,7 @@
 
-   
+   // Le bloc ci-dessous récupére les compétences contenues dans la basse de données. 
+   // Ensuite, il insére les compétences dans le DOM afin de s'en servir pour trier les apprenants
+
     var url = 'https://portfolios.ern-mende.fr/wp-json/wp/v2/competences?per_page=100';
 
     fetch(url)
@@ -23,6 +25,8 @@
     console.log(error);
     });
 
+   // Le bloc ci-dessous récupére les compétences contenues dans la basse de données. 
+   // Ensuite, il insére les compétences dans le DOM afin de s'en servir pour trier les apprenants
 
     var url = 'https://portfolios.ern-mende.fr/wp-json/wp/v2/promotions?per_page=100';
 
@@ -152,9 +156,9 @@
 
    
 
-
-function trouverAnnee(id_annee,data){ // Récupère l'année de promotion de l'apprenant à partir de l'ID de la promo 
-        var url_annee = "https://portfolios.ern-mende.fr/wp-json/wp/v2/promotions/"+id_annee;//AZ: j'ai enlevé le caractère spécial: "é"
+// La fonction ci-dessous récupère l'année de promotion de l'apprenant à partir de l'ID de la promo 
+function trouverAnnee(id_annee,data){ 
+        var url_annee = "https://portfolios.ern-mende.fr/wp-json/wp/v2/promotions/"+id_annee;
         var textAnnee
         fetch(url_annee)
         .then((resp) => resp.json())
@@ -170,7 +174,7 @@ function trouverAnnee(id_annee,data){ // Récupère l'année de promotion de l'a
 
 }
 
-
+// Fonction qui permette de masquer les apprennants que ne passent pas le filtre
 function apliquerFiltre(){
 
 
