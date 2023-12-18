@@ -1,29 +1,29 @@
                                                           /* Css sans class */
 body{
     background-image: url(../images/Desktop\ -\ 4.png);  /*Ajouter un fond */
-    width: 0px;
-    height: 100vw;
+    width: 0px; /* Largeur 0px ? */
+    height: 100vw; /* Hauteur de 100% du doom */
     zoom: 90%; /* Dézoomer légérement */
     background-repeat: no-repeat; /* ²s'assurez qu'il n'y ai pas de répétition */
     color: white; /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
 .titre{
-    display: flex;
-    justify-content: center;
-    margin-top: unset;
-    width: 200px;
+    display: flex; /* Mettre en ligne */
+    justify-content: center; /* justify le texte au centre */
+    margin-top: unset; 
+    width: 200px; /* Largeur du titre de 200px */
 }
 .head{
-    display: flex;
-    margin-left: 30px;
-    margin-bottom: 30px;
+    display: flex; /* Mettre en ligne */
+    margin-left: 30px; /* Espace exterieur gauche de 30px */
+    margin-bottom: 30px; /* Espace exterieur droite de 30px */
 }
 .input{
-    display: flex;
-    margin-left: 15px;
-    padding: 5px;
-    margin: 5px;
+    display: flex; /* Mettre en ligne */
+    margin-left: 15px; /* Espace exterieur gauche de 15px */
+    padding: 5px; /* Espace interieur de 5px */
+    margin: 5px; /* Espace exterieur de 5px */
 }
 .ordi-ligne {
   display: flex; /* Mettre en ligne*/
@@ -161,13 +161,13 @@ a{
     }
 
     h1, h2, h3, h4, p {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 13px; /* Taille de l'écriture de 13px */
+        line-height: 1.4; /* Taille de la line de 1.4 */
     }
 
     .carteApprenant {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 15px; /* Espace interieur gauche de 15px */
+        margin-right: 15px; /* Espace interieur droite de 15px */
     }
 }
 
