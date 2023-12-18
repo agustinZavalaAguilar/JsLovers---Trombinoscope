@@ -4,7 +4,7 @@ body{
     width: 0px;
     height: 100vw;
     zoom: 90%; /* Dézoomer légérement */
-    background-repeat: no-repeat; /* *s'assurez qu'il n'y ai pas de répétition */
+    background-repeat: no-repeat; /* ²s'assurez qu'il n'y ai pas de répétition */
     color: white; /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
@@ -121,7 +121,7 @@ a{
 /* Media query pour les tablettes (par exemple, iPad) */
 @media only screen and (max-width: 1368px) {
     body {
-        background-size: 3000px;
+        background-size: 3000px; /*Fond en taille 3000pixel*/
         height: 300px;
         zoom: 80%;
     }
