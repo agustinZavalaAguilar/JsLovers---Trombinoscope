@@ -12,7 +12,7 @@ fetch(url)
         let competences = data; /* Pour plus de clareté, on change de nom de variable de tous les résultat de l'api  */
 
         var div_competences = document.getElementById("liste_competences") /* On récupère la balise contenant l'id Liste Competences */
-        div_competences.innerHTML = "<input type='checkbox' id='selectionner_tout' name=''   />" +
+        div_competences.innerHTML = "<input type='checkbox' class='case' id='selectionner_tout' name=''   />" +
             "<label id='selectionner_tout'> Tout Décocher </label> " /* Ici on écrit à l'intérieur de la div competence un bouton qui permetera de tous décocher ou cocher facilement */
         
         var index = -1 /* On définie un index qui va pouvoir permettre de naviger dans le tableau des id */
@@ -21,7 +21,7 @@ fetch(url)
         /* La fonction map ne créer pas d'incrémentation. Si nous en avons besoin nous devons le faire manuellement. Ce qui est fait ici */
         competences.map(function (competences) {
             index = index +1 /* on incrémente la variable */
-            div_competences.innerHTML += "<input type='checkbox' id='competence_" + competences.id + "'   name=''   />" +
+            div_competences.innerHTML += "<input type='checkbox' class='case' id='competence_" + competences.id + "'   name=''   />" +
                 "<label id=" + competences.name + ">" + competences.name + "</label> " /* on écrit dans la div un bouton à cocher et la compétence qui lui est associé */
             Tab_competences_id[index] = competences.id 
             /* On ajoute un par un les id des compétences dans notre tableau Etape indispensable pour les filtres */

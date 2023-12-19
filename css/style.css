@@ -7,10 +7,22 @@ body{
     color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
-h1, h2, h3, h4 {
-    font-size: 20px; /* taille de l'écriture */
+h1, h2, h3 {
+    font-size: 30px; /* taille de l'écriture */
     line-height: 1.1; /* Hauteur de l'écriture */
     text-align: center; /* Aligner au millieu */
+}
+p label{
+    font-size: 50px; /* taille de l'écriture */
+    line-height: 1.1; /* Hauteur de l'écriture */
+    text-align: center; /* Aligner au millieu */
+}
+h4{
+    font-size: 36px;
+    line-height: 1.1; /* Hauteur de l'écriture */
+    text-align: center; /* Aligner au millieu */
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 a{
@@ -46,7 +58,6 @@ a:visited{
     display: flex; /* Mettre en ligne */
     justify-content: center;
     margin-left: 15px; /* Espace exterieur gauche de 15px */
-    padding: 5px; /* Espace interieur de 5px */
     margin: 5px; /* Espace exterieur de 5px */
     flex-direction: row;
 }
@@ -55,34 +66,63 @@ a:visited{
     font-size: 25px;
 }
 select{
-    height: 45px;
+    height: 48px;
     width: 400px;
+    display: flex;
+    margin-top: -22px;
+
 }
 .input .row{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
+    
 }
 #liste_annee{
     width: 50vw; /* Largeur*/
-    height: 3vw; /* Hauteur*/
+    height: 3px; /* Hauteur*/
 }
 #MyResearch{
     width: 30vw; /* Largeur*/
+    margin-bottom: 70px;
     height: 3vw; /* Hauteur*/
     border-radius: 10px;
 }
 #liste_competences{
+    background-color: rgba(134, 172, 221, 0.658);
+    border-radius: 15px;
+    border: 2px solid #ffffff; /* Bordure blanche */
+    margin: 95px;
+    padding: 5px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+.case{
+    width: 18px;
+    height: 18px;
+    border-radius: 100px;
+}
+label{
+    display: flex;
+    font-size: 28px; /* taille de l'écriture */
+    line-height: 1.1; /* Hauteur de l'écriture */
+    text-align: center; /* Aligner au millieu */
+    text-transform: lowercase;
+    margin-top: 3px;
+    margin: 5px;
+    margin: auto;
+    justify-content: center;
+}
+label:hover{
+    transform: scale(1.05); /* agrandir la partie ou la sourie touche */
+    filter: drop-shadow(0 0 0.75rem rgb(69, 147, 221)); /* Filtre ombre*/
 }
 /* ___________________________section cart_____________________ */
 #carte_apprenants{
     display: flex;
-    
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 .carteApprenant{
     filter: drop-shadow(0 0 0.75rem rgba(1, 25, 92, 0.178)); /* Filtre avec ombres*/
@@ -97,7 +137,7 @@ select{
     margin: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
 }
 .carteApprenant:hover{
     transform: scale(1.03); /* agrandir la partie ou la sourie touche */
@@ -120,6 +160,9 @@ button:active{
 }
 .en_tete_carte{
     display: flex;
+    background-color: rgba(255, 255, 255, 0.397);
+    margin: 0px;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     font-size: 16px;
@@ -136,5 +179,8 @@ button:active{
 }
 .lien_carte img{
     width: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     height: 50px;
 }
+
