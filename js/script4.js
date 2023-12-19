@@ -86,7 +86,7 @@ fetch(url)
 
             numero_carte = numero_carte + 1 /* On augemente l'incrémentation de 1 */
             divCarteAprenants = document.createElement("div") /* On créer une div  qui stokera toutes les informations de chaque apprenants */
-            divCarteAprenants.classList.add("container") /* On lui ajoute la class "container" pour que le css puisse l'identifier et appliquer la mise en forme d'une carte */
+            divCarteAprenants.classList.add("carteApprenant") /* On lui ajoute la class "container" pour que le css puisse l'identifier et appliquer la mise en forme d'une carte */
             divCarteAprenants.id = "apprenant_" + numero_carte
             /* On rajoute un id dynamique qui changera selon les itérations 
              Important pour les filtres */
@@ -163,7 +163,7 @@ fetch(url)
             if (apprenant.linkedin == undefined) {
                 contenu_du_lien = ""
             } else {
-                contenu_du_lien = "<img src='images/icone_linkedin.jpg'>"
+                contenu_du_lien = "<img src='images/icone_linkedin.png'>"
             }
             divLienCarte.innerHTML +=
                 "<a href='" + apprenant.linkedin + "'>" +

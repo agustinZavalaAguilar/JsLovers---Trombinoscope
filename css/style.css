@@ -1,9 +1,11 @@
+/* ___________________________section style élements essentielles_____________________ */
 body{
+    background-color: black;
     zoom: 90%; /* Dézoomer légérement */
-    color: rgb(0, 0, 0); /* Mettre la couleur de l'écriture en blanc */
+    color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
-h1, h2, h3, h4 ,p{
+h1, h2, h3, h4 {
     font-size: 20px; /* taille de l'écriture */
     line-height: 1.1; /* Hauteur de l'écriture */
     text-align: center; /* Aligner au millieu */
@@ -12,4 +14,93 @@ a{
     color: #ffffff; /* mettre les liens en blanc */
     text-decoration: none; /* Enleve la décoration des lien */
     list-style: none; /* Enleve la décoration des lien */
+}
+img{
+    width: 135px; /* Largeur de l'image */
+    padding: 10px; /* espace a gauche */
+    height: 135px; /* hauteur de l'image */
+    margin-bottom: 10px; /* mettre de l'espace en bas */
+}
+a:visited{
+    color: steelblue; /* mettre les liens qu'on a déjà cliqué en bleu */
+    text-decoration: none; /* Enleve la décoration des lien */
+    list-style: none; /* Enleve la décoration des lien */
+}
+/* ___________________________section style class_____________________ */
+.container_title{
+    background-color: rgba(255, 255, 255, 0.432);
+    padding: 15px;
+    margin: 50px;
+}
+.title{
+    display: flex; /* Mettre en ligne */
+    justify-content: center; /* justify le texte au centre */
+    font-size: 30px;
+}
+.input{
+    display: flex; /* Mettre en ligne */
+    margin-left: 15px; /* Espace exterieur gauche de 15px */
+    padding: 5px; /* Espace interieur de 5px */
+    margin: 5px; /* Espace exterieur de 5px */
+    width: 10000px;
+}
+/* ___________________________section cart_____________________ */
+#carte_apprenants{
+    display: flex;
+    
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+.carteApprenant{
+    filter: drop-shadow(0 0 0.75rem rgba(151, 207, 240, 0.575)); /* Filtre avec ombres*/
+    text-shadow: 0px 1px 1px rgb(255, 255, 255), 0 0 1em rgb(72, 152, 226), 0 0 0.2em rgb(99, 230, 208); /* Ombre du texte*/
+    /*!display: flex;  Mettre les item sur la même ligne */
+    /*!max-height: 600px;  Maximun hauteur*/
+    background-color: rgba(134, 172, 221, 0.658); /* Box color */
+    border-radius: 5px; /* Arrondir les angles de 5px */
+    box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
+    border: 2px solid #ffffff; /* Bordure blanche */
+    width: calc(18% - 20px);
+    padding: 20px;
+    margin: 50px;
+}
+.carteApprenant:hover{
+    transform: scale(1.03); /* agrandir la partie ou la sourie touche */
+    filter: drop-shadow(0 0 0.75rem rgb(69, 147, 221)); /* Filtre ombre*/
+}
+button {
+    height: 40px; /* Hauteur du button*/
+    text-align: center; /* Alligner le texte au centre*/
+    object-fit: cover; /* mettre le objet boutton au centre */
+    background-image: linear-gradient(135deg, #3c68c7 40%, #37accf); /* Dégradé image de fond */
+    border: none; /* pas de bordure */
+    border-radius: 5px; /* Arrondir la bordure */
+    font-weight: bold; /* Largeur de l'écriture*/
+    color: white; /* Couleur de l'écriture */
+    cursor: pointer; /* Souris pointer */
+}
+button:active{
+    box-shadow: 2px 2px 5px #4d9ffc; /* Mettre l'ombre quand on clique */
+}
+.en_tete_carte{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.contenu_carte{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lien_carte{
+    display: flex;
+    justify-content: center;
+}
+.lien_carte img{
+    width: 50px;
+    height: 50px;
 }
