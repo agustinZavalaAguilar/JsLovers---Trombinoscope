@@ -1,7 +1,9 @@
 /* ___________________________section style élements essentielles_____________________ */
 body{
-    background-color: black;
-    zoom: 90%; /* Dézoomer légérement */
+    background-image: url(../images/classe\ nuit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    zoom: 80%; /* Dézoomer légérement */
     color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
@@ -10,6 +12,7 @@ h1, h2, h3, h4 {
     line-height: 1.1; /* Hauteur de l'écriture */
     text-align: center; /* Aligner au millieu */
 }
+
 a{
     color: #ffffff; /* mettre les liens en blanc */
     text-decoration: none; /* Enleve la décoration des lien */
@@ -18,6 +21,7 @@ a{
 img{
     width: 135px; /* Largeur de l'image */
     padding: 10px; /* espace a gauche */
+    padding-top: 0px;
     height: 135px; /* hauteur de l'image */
     margin-bottom: 10px; /* mettre de l'espace en bas */
 }
@@ -30,19 +34,36 @@ a:visited{
 .container_title{
     background-color: rgba(255, 255, 255, 0.432);
     padding: 15px;
-    margin: 50px;
+    margin: 50px; 
+    border-radius: 10px;
 }
 .title{
     display: flex; /* Mettre en ligne */
     justify-content: center; /* justify le texte au centre */
-    font-size: 30px;
+    font-size: 50px; 
 }
 .input{
     display: flex; /* Mettre en ligne */
+    justify-content: center;
     margin-left: 15px; /* Espace exterieur gauche de 15px */
     padding: 5px; /* Espace interieur de 5px */
     margin: 5px; /* Espace exterieur de 5px */
-    width: 10000px;
+    flex-direction: row;
+}
+.main_filtre{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.input .row{
+    display: flex;
+    flex-direction: row;
+}
+#MyResearch{
+    margin-top: 10vw; /* espace exterieur haut*/
+    left: 29vw; /* espace a gauche*/
+    width: 50vw; /* Largeur*/
+    height: 3vw; /* Hauteur*/
+    border-radius: 10px;
 }
 /* ___________________________section cart_____________________ */
 #carte_apprenants{
@@ -54,8 +75,7 @@ a:visited{
     margin-top: 5%;
 }
 .carteApprenant{
-    filter: drop-shadow(0 0 0.75rem rgba(151, 207, 240, 0.575)); /* Filtre avec ombres*/
-    text-shadow: 0px 1px 1px rgb(255, 255, 255), 0 0 1em rgb(72, 152, 226), 0 0 0.2em rgb(99, 230, 208); /* Ombre du texte*/
+    filter: drop-shadow(0 0 0.75rem rgba(1, 25, 92, 0.178)); /* Filtre avec ombres*/
     /*!display: flex;  Mettre les item sur la même ligne */
     /*!max-height: 600px;  Maximun hauteur*/
     background-color: rgba(134, 172, 221, 0.658); /* Box color */
@@ -65,13 +85,16 @@ a:visited{
     width: calc(18% - 20px);
     padding: 20px;
     margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 .carteApprenant:hover{
     transform: scale(1.03); /* agrandir la partie ou la sourie touche */
     filter: drop-shadow(0 0 0.75rem rgb(69, 147, 221)); /* Filtre ombre*/
 }
 button {
-    height: 40px; /* Hauteur du button*/
+    height: 50px; /* Hauteur du button*/
     text-align: center; /* Alligner le texte au centre*/
     object-fit: cover; /* mettre le objet boutton au centre */
     background-image: linear-gradient(135deg, #3c68c7 40%, #37accf); /* Dégradé image de fond */
@@ -80,6 +103,7 @@ button {
     font-weight: bold; /* Largeur de l'écriture*/
     color: white; /* Couleur de l'écriture */
     cursor: pointer; /* Souris pointer */
+    margin-left: 10px;
 }
 button:active{
     box-shadow: 2px 2px 5px #4d9ffc; /* Mettre l'ombre quand on clique */
