@@ -54,16 +54,26 @@ a:visited{
     margin-top: 20px;
     font-size: 25px;
 }
+select{
+    height: 45px;
+    width: 400px;
+}
 .input .row{
     display: flex;
     flex-direction: row;
 }
-#MyResearch{
-    margin-top: 10vw; /* espace exterieur haut*/
-    left: 29vw; /* espace a gauche*/
+#liste_annee{
     width: 50vw; /* Largeur*/
     height: 3vw; /* Hauteur*/
+}
+#MyResearch{
+    width: 30vw; /* Largeur*/
+    height: 3vw; /* Hauteur*/
     border-radius: 10px;
+}
+#liste_competences{
+    display: flex;
+    flex-direction: column;
 }
 /* ___________________________section cart_____________________ */
 #carte_apprenants{
