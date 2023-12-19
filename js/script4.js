@@ -237,6 +237,7 @@ function appliquerfiltre() {
             return response.json();
         })
         .then(function (data) {
+            data[4].competences[2] = 25
             let apprenant = data;
             for (index = 0; index < apprenant.length; index++) {
                 var unApprenant = document.getElementById("apprenant_"+index)
