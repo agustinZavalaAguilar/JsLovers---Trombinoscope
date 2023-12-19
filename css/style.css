@@ -92,8 +92,8 @@ select{
     border-radius: 5px; /* Arrondir les angles de 5px */
     box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
     border: 2px solid #ffffff; /* Bordure blanche */
-    width: calc(18% - 20px);
-    padding: 20px;
+    width: calc(18% - 20px); /* Calcule la largeur*/
+    padding: 20px; /* Filtre avec ombres*/
     margin: 50px;
     display: flex;
     flex-direction: column;
