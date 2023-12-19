@@ -27,7 +27,7 @@
                 <option value="" >2022-2023</option> <!--filtre année-->
                 <option value="">2021-2022</option> <!--filtre année-->
             </select> <!-- Fin Menue année-->
-    
+            <div id="liste_annee"></div>
             <div class="searchBar"> <!--TODO search bar-->
                 <form>
                     <div>
@@ -37,7 +37,9 @@
             </div>
             <div class="profil"> <!--Box profil-->
                 <h4>Profil</h4> <!--Titre moins gros-->
-            </div>
+            </div> 
+            <div id="liste_competences" onchange="apliquerFiltre()"></div> 
+
             <div class="competence"> <!--Filtre compêtence-->
                 <input type="checkbox" id="frontDev" name="frontDev" value="frontDev" checked /> <!--Filtre Front-->
                 <label for="frontDev">Front Dev</label> <!-- Texte Filtre Front-->
@@ -48,10 +50,16 @@
             </div> <!-- Fin Filtre compêtence-->
         </div>
     </form>
-<div id="liste_annee"></div>
+    <section>
+        <div class="container">
+            <div class="row" id="carte_apprenants">
+            </div>
+        </div>
+    </section>
 
-<div id="liste_competences" onchange="apliquerFiltre()"></div>
 
- <div id="carte_apprenants"></div>
+
+
+
 </body>
 </html>
