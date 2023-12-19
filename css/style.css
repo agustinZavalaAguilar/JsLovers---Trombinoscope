@@ -47,10 +47,12 @@ a:visited{
     background-color: rgba(255, 255, 255, 0.432);
     padding: 15px;
     margin: 50px; 
-    border-radius: 10px;
+    border-radius: 50px;
 }
 .title{
     display: flex; /* Mettre en ligne */
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 50%;
     justify-content: center; /* justify le texte au centre */
     font-size: 50px; 
 }
@@ -160,7 +162,7 @@ button:active{
 }
 .en_tete_carte{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.397);
+    background-color: rgba(255, 255, 255, 0.089);
     margin: 0px;
     width: 100%;
     flex-direction: row;
@@ -182,5 +184,11 @@ button:active{
     margin-bottom: 0px;
     padding-bottom: 0px;
     height: 50px;
+}
+.box_label{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 50px;
 }
 
