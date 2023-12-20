@@ -5,150 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script4.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="titre">Trombinoscope de l'école du numérique</h1> <!--Titre-->
-    <!--scrolling menu-->
-    <h4>Promotion</h4> <!--Titre moins gros-->
-    <select name="promo" id="anne-select"> <!--Menue année-->
-        <option value="">Année</option> <!--Base années-->
-        <option value="">2023-2024</option> <!--filtre année-->
-        <option value="">2022-2023</option> <!--filtre année-->
-        <option value="">2021-2022</option> <!--filtre année-->
-      </select> <!-- Fin Menue année-->
-
-    <!--search bar-->
-    <div class="searchBar">
-        <form>
-            <div>
-              <input type="search" id="MyResearch" name="searchBar" placeholder="Search" onchange="RechercheParNom()" /> <!--Barre de recherche-->
+    <header> 
+        <div class="container_title">
+            <div class="row">
+                <h1 class="title">Trombinoscope formation Développement Web Greta</h1> 
             </div>
-        </form> 
-    </div>
+        </div>           
+    </header>
+    
+   
+    <!--TODO Front or Back Profil-->
+  
+    <section class="filtre">
+        <div class="container_promotion">
+            <div class="row">
+                 <h4>Promotion</h4>
+            </div>
+        </div>
+        <div class="input">
+            <div class="row">
+                <div class ="main_filtre"id="liste_annee"onchange="appliquerfiltre()"></div>
+                <div class="searchBar main_filtre"></div>    
+                <input type="search" id="MyResearch" name="searchBar" placeholder="recherche par Nom/Prénom..." onkeyup="appliquerfiltre()" /> <!--Barre de recherche--> 
+            </div>
+        </div>
+        <div class="row">
+             <div class ="main_filtre"id="liste_competences" onchange="appliquerfiltre()"></div>
+        </div>       
+    </section>
 
-    <!--Front or Back Profil-->
-    <form><h4>Profil</h4> <!--Titre moins gros-->
-      <div class="competence"> <!--Filtre compêtence-->
-          <input type="checkbox" id="frontDev" name="frontDev" value="frontDev" checked /> <!--Filtre Front-->
-          <label for="frontDev">Front Dev</label> <!-- Texte Filtre Front-->
+    <section class="Card">
+        <div class="container_card">
+            <div class="row" id="carte_apprenants">
+            </div>
         </div>
-        <div>
-          <input type="checkbox" id="backDev" name="backDev" value="backDev" /> <!--Filtre Back-->
-          <label for="backDev">Back Dev</label> <!-- Texte Filtre Back-->
-        </div> <!-- Fin Filtre compêtence-->
-    </form>
-    <div class="carteApprenant"> <!--card-->
-        <div class="container"> <!--Container card-->
-            <p id="nom0">nom</p> <!--Nom de famille de la personne-->
-            <p id="prenom0">prenom</p> <!--Prénom de la personne-->
-            <p id="annee0">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar0"> <!--Avatar de la personne-->
-            <div id="extrait0" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio0">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv0">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom1">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom1">prenom</p> <!--Prénom de la personne-->
-            <p id="annee1">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar1"> <!--Avatar de la personne-->
-            <div id="extrait1" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio1">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv1">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom2">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom2">prenom</p> <!--Prénom de la personne-->
-            <p id="annee2">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar2"> <!--Avatar de la personne-->
-            <div id="extrait2" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio2">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv2">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom3">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom3">prenom</p> <!--Prénom de la personne-->
-            <p id="annee3">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar3"> <!--Avatar de la personne-->
-            <div id="extrait3" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio3">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv3">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom4">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom4">prenom</p> <!--Prénom de la personne-->
-            <p id="annee4">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar4"> <!--Avatar de la personne-->
-            <div id="extrait4" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio4">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv4">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom5">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom5">prenom</p> <!--Prénom de la personne-->
-            <p id="annee5">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar5"> <!--Avatar de la personne-->
-            <div id="extrait5" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio5">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv5">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom6">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom6">prenom</p> <!--Prénom de la personne-->
-            <p id="annee6">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar6"> <!--Avatar de la personne-->
-            <div id="extrait6" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio6">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv6">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-            <div class="container"> <!--Container card-->
-            <p id="nom7">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom7">prenom</p> <!--Prénom de la personne-->
-            <p id="annee7">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar7"> <!--Avatar de la personne-->
-            <div id="extrait7" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio7">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv7">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom8">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom8">prenom</p> <!--Prénom de la personne-->
-            <p id="annee8">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar8"> <!--Avatar de la personne-->
-            <div id="extrait8" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio8">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv8">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-        <div class="container"> <!--Container card-->
-            <p id="nom9">nom </p> <!--Nom de famille de la personne-->
-            <p id="prenom9">prenom</p> <!--Prénom de la personne-->
-            <p id="annee9">Année</p> <!--Année de formation de la personne-->
-            <img  id="avatar9"> <!--Avatar de la personne-->
-            <div id="extrait9" >Extrait</div> <!-- etrait descriptif de la personne-->
-            <a id="portfolio9">Adresse portfolio</a> <!-- Lien du portefolio de la personne-->
-            <br>
-            <a id="cv9">Lien vers le cv</a> <!-- Lien du CV de la personne-->
-            <br>
-        </div>
-    </div> <!-- fin card-->
+    </section>
 </body>
 </html>
