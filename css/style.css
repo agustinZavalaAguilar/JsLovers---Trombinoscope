@@ -134,11 +134,13 @@ label:hover{
 }
 .carteApprenant{
     filter: drop-shadow(0 0 0.75rem rgba(1, 25, 92, 0.178)); /* Filtre avec ombres*/
+    /*!display: flex;  Mettre les item sur la même ligne */
+    /*!max-height: 600px;  Maximun hauteur*/
     background-color: rgba(134, 172, 221, 0.658); /* Box color */
     border-radius: 5px; /* Arrondir les angles de 5px */
     box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
     border: 2px solid #ffffff; /* Bordure blanche */
-    width: calc(18% - 20px); /* Calcule la largeur*/
+    width: calc(19% - 20px); /* Calcule la largeur*/
     padding: 20px; /* Filtre avec ombres*/
     margin: 50px;
     display: flex;
