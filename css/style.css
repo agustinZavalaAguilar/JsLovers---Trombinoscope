@@ -198,7 +198,18 @@ button:active{
 }
 /* ______________________________________________________Média Query________________________________________________ */
 /*mobile first*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px){
+    .input .row{
+        display: flex;
+        flex-direction: column;
+    }
+    #MyResearch{
+        margin-top: 15px;
+        width: 100%;
+    }
+    #selection_promotions{
+        width: 100%;
+    }
     body{
         background-image: url(../images/classe\ nuit.jpg);
         background-repeat: no-repeat;
@@ -323,7 +334,143 @@ button:active{
     }
 }
 /*mediaquery tablette*/
-@media only screen and (max-width: 880px){
+@media only screen and (min-width: 480px) and (max-width: 880px){
+    body{
+        background-image: url(../images/classe\ nuit.jpg);
+        background-repeat: no-repeat;
+        filter: blur(0px);
+        background-size: cover;
+        font-family: 'Inconsolata', monospace;
+        zoom: 80%; /* Dézoomer légérement */
+        color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
+        overflow-x: hidden; /* Enlever la barre du bas */
+    }
+    .input .row{
+        display: flex;
+        flex-direction: column;
+    }
+    #MyResearch{
+        margin-top: 15px;
+        width: 100%;
+    }
+    #selection_promotions{
+        width: 100%;
+    }
+    h1, h2, h3 {
+        font-size: 15px; /* taille de l'écriture */
+        line-height: 1.0; /* Hauteur de l'écriture */
+        text-align: center; /* Aligner au millieu */
+    }
+    p label{
+        font-size: 30px; /* taille de l'écriture */
+        line-height: 1.0; /* Hauteur de l'écriture */
+        text-align: center; /* Aligner au millieu */
+    }
+    h4{
+        font-size: 26px;
+        background-color: rgba(134, 172, 221, 0.658);
+        border-radius: 15px;
+        padding: 15px;
+        margin: 50px; 
+        border: 2px solid #ffffff; /* Bordure blanche */
+        line-height: 1.1; /* Hauteur de l'écriture */
+        text-align: center; /* Aligner au millieu */
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+    
+    a{
+        color: #ffffff; /* mettre les liens en blanc */
+        text-decoration: none; /* Enleve la décoration des lien */
+        list-style: none; /* Enleve la décoration des lien */
+    }
+    img{
+        width: 100px; /* Largeur de l'image */
+        padding: 10px; /* espace a gauche */
+        padding-top: 0px;
+        height: 100px; /* hauteur de l'image */
+        margin-bottom: 10px; /* mettre de l'espace en bas */
+    }
+    a:visited{
+        color: steelblue; /* mettre les liens qu'on a déjà cliqué en bleu */
+        text-decoration: none; /* Enleve la décoration des lien */
+        list-style: none; /* Enleve la décoration des lien */
+    }
+    /* ___________________________section cart_____________________ */
+    #carte_apprenants{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1%;
+    }
+    .carteApprenant{
+        filter: drop-shadow(0 0 0.75rem rgba(1, 25, 92, 0.178)); /* Filtre avec ombres*/
+        background-color: rgba(134, 172, 221, 0.658); /* Box color */
+        border-radius: 5px; /* Arrondir les angles de 5px */
+        box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
+        border: 2px solid #ffffff; /* Bordure blanche */
+        width: calc(33% - 10px); /* Calcule la largeur*/
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .carteApprenant:hover{
+        transform: scale(1.03); /* agrandir la partie ou la sourie touche */
+        filter: drop-shadow(0 0 0.75rem rgb(69, 147, 221)); /* Filtre ombre*/
+    }
+    button {
+        height: 50px; /* Hauteur du button*/
+        text-align: center; /* Alligner le texte au centre*/
+        object-fit: cover; /* mettre le objet boutton au centre */
+        background-image: linear-gradient(135deg, #3c68c7 40%, #37accf); /* Dégradé image de fond */
+        border: none; /* pas de bordure */
+        border-radius: 5px; /* Arrondir la bordure */
+        font-weight: bold; /* Largeur de l'écriture*/
+        color: white; /* Couleur de l'écriture */
+        cursor: pointer; /* Souris pointer */
+        margin-left: 10px;
+    }
+    button:active{
+        box-shadow: 2px 2px 5px #4d9ffc; /* Mettre l'ombre quand on clique */
+    }
+    .en_tete_carte{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.089);
+        margin: 0px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+    .contenu_carte{
+        font-size: 24px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lien_carte{
+        display: flex;
+        justify-content: center;
+    }
+    .lien_carte img{
+        width: 50px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        height: 50px;
+    }
+    .box_label{
+        display: flex;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-right: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 1440px){
     body{
         background-image: url(../images/classe\ nuit.jpg);
         background-repeat: no-repeat;
@@ -388,7 +535,7 @@ button:active{
         border-radius: 5px; /* Arrondir les angles de 5px */
         box-shadow: 0px 0px 10px rgba(110, 131, 160, 0.658); /* Ombre du box color */
         border: 2px solid #ffffff; /* Bordure blanche */
-        width: calc(50% - 10px); /* Calcule la largeur*/
+        width: calc(20% - 10px); /* Calcule la largeur*/
         padding: 5px;
         display: flex;
         flex-direction: column;
@@ -447,4 +594,6 @@ button:active{
     }
 
 }
+ 
+
  
