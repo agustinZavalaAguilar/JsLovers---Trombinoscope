@@ -2,8 +2,10 @@
 body{
     background-image: url(../images/classe\ nuit.jpg);
     background-repeat: no-repeat;
+    filter: blur(0px);
     background-size: cover;
-    zoom: 80%; /* Dézoomer légérement */
+    font-family: 'Inconsolata', monospace;
+    zoom: 90%; /* Dézoomer légérement */
     color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
 }
@@ -19,6 +21,11 @@ p label{
 }
 h4{
     font-size: 36px;
+    background-color: rgba(134, 172, 221, 0.658);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 50px; 
+    border: 2px solid #ffffff; /* Bordure blanche */
     line-height: 1.1; /* Hauteur de l'écriture */
     text-align: center; /* Aligner au millieu */
     margin-bottom: 100px;
@@ -44,15 +51,14 @@ a:visited{
 }
 /* ___________________________section style class_____________________ */
 .container_title{
-    background-color: rgba(255, 255, 255, 0.432);
+    background-color: rgba(134, 172, 221, 0.658);
+    border-radius: 15px;
+    border: 2px solid #ffffff; /* Bordure blanche */
     padding: 15px;
     margin: 50px; 
-    border-radius: 50px;
 }
 .title{
     display: flex; /* Mettre en ligne */
-    background-color: rgba(255, 255, 255, 0.274);
-    border-radius: 50%;
     justify-content: center; /* justify le texte au centre */
     font-size: 50px; 
 }
@@ -86,7 +92,7 @@ select{
 #MyResearch{
     width: 30vw; /* Largeur*/
     margin-bottom: 70px;
-    height: 3vw; /* Hauteur*/
+    height:48px; /* Hauteur*/
     border-radius: 10px;
 }
 #liste_competences{
@@ -170,6 +176,7 @@ button:active{
     font-size: 16px;
 }
 .contenu_carte{
+    font-size: 24px;
     margin: 15px;
     display: flex;
     flex-direction: column;
