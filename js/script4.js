@@ -14,9 +14,6 @@ fetch(url)
         var div_competences = document.getElementById("liste_competences") /* On récupère la balise contenant l'id Liste Competences */
         var div_unecompetence = document.createElement("div")
         div_unecompetence.classList.add("box_label")
-        div_unecompetence.innerHTML = "<input type='checkbox' class='case' id='selectionner_tout' name=''   />" +
-            "<label id='selectionner_tout'> Tout Décocher </label> " /* Ici on écrit à l'intérieur de la div competence un bouton qui permetera de tous décocher ou cocher facilement */
-            div_competences.appendChild(div_unecompetence)
         var index = -1 /* On définie un index qui va pouvoir permettre de naviger dans le tableau des id */
         /* Noter que le fonction map permet de créer une boucle */
         /* Elle va effectuer la même opération pour chaque compétences dans l'api */
@@ -175,10 +172,10 @@ fetch(url)
                 contenu_du_lien +
                 "</a>"
 
+            
             divCarteAprenants.appendChild(divLienCarte)
             /* On ajoute les liens à notre div d'une carte apprenant */
-
-
+            
             document.getElementById("carte_apprenants").appendChild(divCarteAprenants)
             /* Maintenant qu notre div Aprenant est complête on l'affecte à une div présente dans le dom afin de l'afficher */
 
@@ -188,6 +185,11 @@ fetch(url)
         
             /* On recommence toute cette opérations pour chaque apprenants par la boucle map*/
         });
+        var aucun_etudient = document.createElement("span")
+            aucun_etudient.id = "aucun_apprenant"
+            aucun_etudient.innerHTML = "Aucun apprenant n'a été trouvé avec les filtres selectionnés !"
+            aucun_etudient.style.display = "none"
+            document.getElementById("carte_apprenants").appendChild(aucun_etudient)
     })
     .catch(function (error) {
         console.log(error);
@@ -237,7 +239,11 @@ function appliquerfiltre() {
             return response.json();
         })
         .then(function (data) {
+            var aucun_apprenant = document.getElementById("aucun_apprenant")
+            aucun_apprenant.style.display = "none"
+
             data[4].competences[2] = 25
+           
             let apprenant = data;
             for (index = 0; index < apprenant.length; index++) {
                 var unApprenant = document.getElementById("apprenant_"+index)
@@ -245,6 +251,9 @@ function appliquerfiltre() {
             }
             var selectionCompetences = document.getElementById("selection_promotions")
             var anneeSelectionne = selectionCompetences.value
+
+
+
             if (anneeSelectionne == "Toutes les années"){
                 // Si toutes les année sont sélectionner alors n'enlever aucune valeur 
             }else{
@@ -277,6 +286,9 @@ function appliquerfiltre() {
                     }
                 }  
             }
+
+
+            
             var recherche = document.getElementById("MyResearch")
             console.log("recherche")
             valeurAChercher = recherche.value
@@ -295,6 +307,19 @@ function appliquerfiltre() {
                     }
                 }
             }
+
+            var une_personne_a_afficher = false
+            for (var index = 0 ; index < apprenant.length; index++){
+                var unApprenant = document.getElementById("apprenant_"+index)
+                if (unApprenant.style.display == "flex"){
+                    une_personne_a_afficher = true
+                }
+            }
+            if (une_personne_a_afficher == false){
+                aucun_apprenant.style.display = "flex"
+            }
+
+            
 
 
 
